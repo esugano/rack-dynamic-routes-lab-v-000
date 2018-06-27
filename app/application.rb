@@ -1,7 +1,7 @@
 require 'pry'
 
 class Application
-
+  @@item = Item.all
   def call(env)
     resp =Rack::Response.new
     req = Rack::Request.new(env)
@@ -13,6 +13,11 @@ class Application
       item_find = Item.all.find{|i| i.name == item_name}
       #if items exists, return its price
       if req.path.match("/items/#{item_name}")
+        Item.all.each do |item|
+          if item.name == item_name
+            item.price
+          end
+        end
       #if item doesn't exists, return a 400 page
       else
         resp.status = 400
