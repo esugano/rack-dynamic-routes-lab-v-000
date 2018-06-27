@@ -14,9 +14,9 @@ class Application
       #if items exists, return its price
       if req.path.match("/items/#{item_name}")
       #if item doesn't exists, return a 400 page
-      # else
-      #   resp.status = 400
-      #   resp.write "Item not found"
+      else
+        resp.status = 400
+        resp.write "Item not found"
       end
     #all other paths that are not /items/<ITEM NAME> are 404 pages
     else
