@@ -12,4 +12,5 @@ class Item
   def all
     @@all
   end
+  
 end
