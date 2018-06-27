@@ -8,7 +8,7 @@ class Application
     req = Rack::Request.new(env)
     binding.pry
     #if /items/<ITEM NAME> route
-    if req.path=="/items"
+    if req.path.match("/items")
       #get item name
       item_name = req.path.split("/items/").last
       #see if item exists
