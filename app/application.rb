@@ -1,7 +1,7 @@
 require 'pry'
 
 class Application
-  @@item = Item.all
+  @@items = Item.all
   binding.pry
   def call(env)
     resp =Rack::Response.new
