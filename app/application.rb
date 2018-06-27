@@ -2,10 +2,11 @@ require 'pry'
 
 class Application
   @@items = Item.all
-  binding.pry
+
   def call(env)
     resp =Rack::Response.new
     req = Rack::Request.new(env)
+      binding.pry
     #if /items/<ITEM NAME> route
     if req.path=="/items"
       #get item name
