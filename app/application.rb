@@ -11,10 +11,9 @@ class Application
       item_name = req.path.split("/items/").last
       #see if item exists
       item_find = Item.all.find{|i| i.name == item_name}
-
+      binding.pry
       #if items exists, return its price
       if req.path.match("/items/#{item_name}")
-        binding.pry
       #if item doesn't exists, return a 400 page
       # else
       #   resp.status = 400
