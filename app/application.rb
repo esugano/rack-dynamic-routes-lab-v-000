@@ -14,7 +14,7 @@ class Application
       item_find = Item.all.find{|i| i.name == item_name}
       #if items exists, return its price
       if item_find != nil
-        item_find.price
+       puts item_find.price
       else
         resp.status = 400
         resp.write "Item not found"
