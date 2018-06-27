@@ -19,7 +19,7 @@ class Application
       # else
       #   resp.status = 400
       #   resp.write "Item not found"
-      # end
+      end
     #all other paths that are not /items/<ITEM NAME> are 404 pages
     else
       resp.status = 404
