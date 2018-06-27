@@ -1,7 +1,7 @@
 require 'pry'
 
 class Application
-  @@items = Item.all
+  @@items = []
 
   def call(env)
     resp =Rack::Response.new
