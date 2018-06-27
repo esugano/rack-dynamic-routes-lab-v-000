@@ -14,7 +14,7 @@ class Application
 
       #if items exists, return its price
       if req.path.match("/items/#{item_name}")
-
+        binding.pry
       #if item doesn't exists, return a 400 page
       # else
       #   resp.status = 400
